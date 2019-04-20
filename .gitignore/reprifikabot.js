@@ -164,5 +164,10 @@ bot.on('message', message => {
       }
     }
   });
+
+bot.on('guildMemberAdd', fonction(member){
+       let memberRole = member.guild.roles.find('name', '۞ --------------- Rang --------------- ۞');
+       member.addRole(memberRole);
+});
  
 bot.login(process.env.TOKEN)
