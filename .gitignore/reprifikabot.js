@@ -5,7 +5,7 @@ var prefix = ('*')
 
 
 bot.on('ready', function () {
-    bot.user.setGame('création de bot Discord').catch(console.error) 
+    bot.user.setGame('créer des bots Discord').catch(console.error) 
 })
  
 bot.on('guildMemberAdd', function (member) {
