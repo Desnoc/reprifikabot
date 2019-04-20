@@ -21,7 +21,7 @@ bot.on("message", message => {
 	}
 
 	if(message.content === prefix + "tt"){
-		message.channel.sendMessage("Bot créer le _20/04/2019_ à _18h00");
+		message.channel.sendMessage("Bot créer le _20/04/2019_ à _18h00_```");
 		console.log("Commande éffectuée");
 	}
 
