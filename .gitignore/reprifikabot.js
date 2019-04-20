@@ -17,16 +17,16 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on("message", message => {
 	if(message.content === prefix + "help"){
-		message.channel.sendMessage("Liste des commandes : *tt/ *fabriquant");
+		message.channel.sendMessage("**Liste des commandes : *tt/ *fabriquant"**);
 	}
 
 	if(message.content === prefix + "tt"){
-		message.channel.sendMessage("Bot créer le _20/04/2019_ à _18h00_");
+		message.channel.sendMessage("**Bot créer le** _20/04/2019_ **à** _18h00_");
 		console.log("Commande éffectuée");
 	}
 
 	if(message.content === prefix + "fabriquant"){
-		message.channel.sendMessage("Le bot à été créé par Desnoc");
+		message.channel.sendMessage("***Le bot à été créé par Desnoc***");
 		console.log("Commande éffectuée");
 	}
 });
