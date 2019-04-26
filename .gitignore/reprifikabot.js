@@ -168,7 +168,7 @@ bot.on('message', message => {
 bot.on("message", message => {
     if(message.content[0] === prefix){
         if(message.content == prefix + message){
-            message.channel.send(message);
+            message.channel.send(message.content);
         }
     }
 });
