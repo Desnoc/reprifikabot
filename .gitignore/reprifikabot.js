@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on("message", message => {
 	if(message.content === prefix + "help"){
-		message.channel.sendMessage("Liste des commandes : *tt/ *fabriquant");
+		message.channel.sendMessage("Liste des commandes : *tt*/ *fabriquant*");
 	}
 
 	if(message.content === prefix + "tt"){
