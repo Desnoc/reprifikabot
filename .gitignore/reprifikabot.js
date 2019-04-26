@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 
-var prefix = ('*')
+var prefix = ('*') 
 
 
 bot.on('ready', function () {
@@ -17,7 +17,7 @@ bot.on('guildMemberAdd', function (member) {
 
 bot.on("message", message => {
 	if(message.content === prefix + "help"){
-		message.channel.sendMessage("Liste des commandes : *tt*/ *fabriquant*");
+		message.channel.sendMessage("Liste des commandes : *tt* **/** *fabriquant*");
 	}
 
 	if(message.content === prefix + "tt"){
@@ -164,5 +164,13 @@ bot.on('message', message => {
       }
     }
   });
+
+bot.on("message", message => {
+    if(message.content[0] === prefix){
+        if(message.content == prefix + args){
+            message.channel.send(args);
+        }
+    }
+});
  
 bot.login(process.env.TOKEN)
