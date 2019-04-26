@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 
 var prefix = ('*') 
+var message1 = String
 
 
 bot.on('ready', function () {
