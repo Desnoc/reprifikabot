@@ -166,5 +166,26 @@ bot.on('message', message => {
       }
     }
   });
+
+bot.on('guildMemberAdd', function (member){
+    updateStatut(member.guild);
+});
+    
+bot.on('guildMemberRemove', function (member){
+     updateStatut(member.guild);
+});
+    
+bot.on('presenceUpdate', function(member){
+    updateStatut(member.guild);
+});
+function updateStatut(guild){
+    let max = guild.memberCount-4;
+    let online = guild.member.filter(member => member.presence.status != 'offline').size-4;
+    let formatString = 'Il y a : ' + online + '/' + max;
+    let channel = guild.channels.get(channelID);
+    if(channel.name !== formatString){
+        channel.setName(formatString);
+    } 
+}
  
 bot.login(process.env.TOKEN)
