@@ -181,9 +181,9 @@ bot.on('presenceUpdate', function(member){
 
 function updateStatut(guild){
     let max = guild.memberCount-4;
-    let online = guild.member.filter(m == m.presence.status != 'offline').size-4;
+    let online = guild.member.filter(m => m.presence.status != 'offline').size-4;
     let formatString = 'Il y a : ' + online + '/' + max;
-    let channel = guild.channels.get('channelID');
+    let channel = guild.channels.get(channelID);
     if(channel.name !== formatString){
         channel.setName(formatString);
     } 
